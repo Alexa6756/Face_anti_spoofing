@@ -38,7 +38,7 @@ Face_anti_spoofing/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/<your-username>/face_anti_spoofing.git
+   git clone https://github.com/<your-username>/Face_anti_spoofing.git
    cd face_anti_spoofing/src
    ```
 
@@ -60,7 +60,7 @@ Face_anti_spoofing/
 python train.py
 ```
 
-This will train the CNN and save the model as `models/anti_spoof_model.pth`.
+This will train the CNN and save the model as `models/anti_spoof_rgb_model.pth`.
 
 ---
 
@@ -71,12 +71,6 @@ This will train the CNN and save the model as `models/anti_spoof_model.pth`.
   ```bash
   python realtimetest.py
   ```
-* To evaluate on validation dataset:
-
-  ```bash
-  python realtimetest.py --mode val
-  ```
-
 ---
 
 ### 3️⃣ Generate Grad-CAM Heatmaps
