@@ -31,13 +31,48 @@ Face_anti_spoofing/
 
 ---
 
-##  Installation
+Here's the updated **README.md** with a "How to Run from GitHub" section:
 
-1. Clone the repository:  
+---
+
+# **Face Anti-Spoofing System**
+
+A real-time face authentication system using CNNs with Grad-CAM visualization and webcam input support.
+Achieved **98.2% accuracy** and **97.5% F1-score** on the validation dataset.
+
+---
+
+## **Project Structure**
+
+```
+Face_anti_spoofing/
+├── data/                  # Dataset folder (Training, Val, Testing) [Not uploaded to GitHub]
+│
+├── src/                   # All source code and models
+│   ├── dataset_loader.py  # Data loading pipeline
+│   ├── train.py           # Model training & validation
+│   ├── model.py           # CNN model architecture
+│   ├── realtimetest.py    # Real-time webcam testing or dataset evaluation
+│   ├── gradcam.py         # Grad-CAM heatmap generation
+│   ├── sample.png         # Sample Grad-CAM output
+│   ├── dataset_clean.csv  # Cleaned dataset paths & labels
+│   └── models/            # Saved models (.pth)
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
+## **Installation**
+
+1. Clone the repository:
+
    ```bash
-   git clone https://github.com/<your-username>/Face_anti_spoofing.git
-   cd Face_anti_spoofing
-
+   git clone https://github.com/<your-username>/face_anti_spoofing.git
+   cd face_anti_spoofing/src
+   ```
 
 2. Install dependencies:
 
@@ -45,45 +80,50 @@ Face_anti_spoofing/
    pip install -r requirements.txt
    ```
 
-3. Place your dataset inside the `data/` folder (if not already present).
+3. Add the **data folder** (with `Training`, `Val`, and `Testing`) to the project root (not included in GitHub).
 
 ---
 
-##  Training the Model
+## **How to Run**
 
-To train the CNN model:
+### 1️⃣ Train the model
 
 ```bash
-cd src
 python train.py
 ```
 
-* Trained model will be saved in `src/models/anti_spoof_model.pth`.
-* Validation accuracy and F1-score will be displayed after each epoch.
+This will train the CNN and save the model as `models/anti_spoof_model.pth`.
 
 ---
 
-##  Real-Time Testing (Webcam)
+### 2️⃣ Evaluate or run real-time webcam testing
 
-To run live webcam-based spoof detection:
+* To run real-time webcam detection:
+
+  ```bash
+  python realtimetest.py
+  ```
+* To evaluate on validation dataset:
+
+  ```bash
+  python realtimetest.py --mode val
+  ```
+
+---
+
+### 3️⃣ Generate Grad-CAM Heatmaps
 
 ```bash
-cd src
-python realtimetest.py
+python gradcam.py
 ```
 
-Press **`q`** to quit the webcam window.
+This visualizes the model's decision-making for a sample image.
 
 ---
 
-##  Results
+## **Notes**
 
-* **Validation Accuracy:** 98.2%
-* **F1-score:** 97.5%
+* The `data` folder is **not uploaded to GitHub** (large dataset). Add it manually after cloning.
+* The `models/` folder will be empty initially. Either **train the model** or place pre-trained `.pth` files inside it.
 
 ---
-
-##  Notes
-
-* `data/` and `src/models/` are ignored in `.gitignore` to avoid pushing large files to GitHub.
-* Use the same dataset structure as provided in the project for correct loading.
