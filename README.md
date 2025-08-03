@@ -12,25 +12,22 @@ This project implements a **real-time face anti-spoofing system** using Convolut
 
 ##  Project Structure
 
-
-
-Face\_anti\_spoofing/
-├── data/                  # Dataset folder (Training, Val, Testing)
-├── src/                   # All source code and models
-│   ├── dataset\_loader.py  # Data loading pipeline
-│   ├── train.py           # Model training & validation
-│   ├── model.py           # CNN model architecture
-│   ├── realtimetest.py    # Real-time webcam testing or dataset evaluation
-│   ├── gradcam.py         # Grad-CAM heatmap generation
-|   |--- sample.png 
-│   ├── dataset\_clean.csv  # Cleaned dataset paths & labels
-│   └── models/            # Saved models (.pth)
+Face_anti_spoofing/
+├── data/ # Dataset folder (Training, Val, Testing) [Not uploaded to GitHub]
+│
+├── src/ # All source code and models
+│ ├── dataset_loader.py # Data loading pipeline
+│ ├── train.py # Model training & validation
+│ ├── model.py # CNN model architecture
+│ ├── realtimetest.py # Real-time webcam testing or dataset evaluation
+│ ├── gradcam.py # Grad-CAM heatmap generation
+│ ├── sample.png # Sample Grad-CAM output
+│ ├── dataset_clean.csv # Cleaned dataset paths & labels
+│ └── models/ # Saved models (.pth)
 │
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
-
 
 ---
 
