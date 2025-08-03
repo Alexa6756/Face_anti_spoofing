@@ -1,4 +1,4 @@
-```markdown
+
 # 🛡️ Face Anti-Spoofing System
 
 This project implements a **real-time face anti-spoofing system** using Convolutional Neural Networks (CNNs). It detects whether a face is real or spoofed using RGB, depth, and IR data.  
@@ -13,7 +13,7 @@ This project implements a **real-time face anti-spoofing system** using Convolut
 
 ##  Project Structure
 
-```
+
 
 Face\_anti\_spoofing/
 ├── data/                  # Dataset folder (Training, Val, Testing)
@@ -23,6 +23,7 @@ Face\_anti\_spoofing/
 │   ├── model.py           # CNN model architecture
 │   ├── realtimetest.py    # Real-time webcam testing or dataset evaluation
 │   ├── gradcam.py         # Grad-CAM heatmap generation
+|   |--- sample.png 
 │   ├── dataset\_clean.csv  # Cleaned dataset paths & labels
 │   └── models/            # Saved models (.pth)
 │
@@ -30,7 +31,7 @@ Face\_anti\_spoofing/
 ├── .gitignore
 └── README.md
 
-````
+
 
 ---
 
