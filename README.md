@@ -41,7 +41,7 @@ Face\_anti\_spoofing/
    ```bash
    git clone https://github.com/<your-username>/Face_anti_spoofing.git
    cd Face_anti_spoofing
-````
+
 
 2. Install dependencies:
 
@@ -91,5 +91,3 @@ Press **`q`** to quit the webcam window.
 
 * `data/` and `src/models/` are ignored in `.gitignore` to avoid pushing large files to GitHub.
 * Use the same dataset structure as provided in the project for correct loading.
-
-````
