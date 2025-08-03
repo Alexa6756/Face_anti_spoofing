@@ -1,4 +1,3 @@
-
 # 🛡️ Face Anti-Spoofing System
 
 This project implements a **real-time face anti-spoofing system** using Convolutional Neural Networks (CNNs). It detects whether a face is real or spoofed using RGB, depth, and IR data.  
